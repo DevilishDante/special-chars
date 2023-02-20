@@ -1,0 +1,89 @@
+/* Tooltip container */
+tooltip {
+    position: relative;
+    display: inline-block;
+}
+/* Tooltip text */
+tooltip .t-content {
+    font-size: small !important;
+    padding: 0.2rem !important;
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--c-tooltip);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+tooltip:hover .t-content {visibility: visible;}
+/* bottom */
+tooltip .t-bottom {
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+/* arrow bottom */
+tooltip .t-bottom::before {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--c-tooltip) transparent;
+}
+/* top */
+tooltip .t-top {
+    width: 120px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+/* arrox top */
+tooltip .t-top::before {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--c-tooltip) transparent transparent transparent;
+}
+/* left */
+tooltip .t-left {top: -5px;right: 105%;}
+/* left arrow */
+tooltip .t-left::before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; /* To the right of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--c-tooltip)
+}
+/* right */
+tooltip .t-right {top: -5px;left: 105%;}
+/* right arrow */
+tooltip .t-right::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--c-tooltip) transparent transparent;
+}
+/* fadeout */
+tooltip .t-content,tooltip .t-bottom,
+tooltip .t-top,tooltip .t-left,
+tooltip .t-right {opacity: 0;transition: opacity 1s;}
+tooltip:hover .t-content {opacity: 1;}

@@ -1,0 +1,215 @@
+@font-face {
+    font-family: "Sunny Spells";
+    src: url(/app/assets/font/Sunny\ Spells.ttf);
+}
+:root{
+    --c-bg: #11151C;
+    --c-main: #212D40;
+    --c-second: #364156;
+    --c-color1: #7D4E57;
+    --c-color2: #D66853;
+    --c-tooltip: #242424;
+}
+body{background-color: var(--c-bg);border-radius: 5px;padding: 5px;max-width: 500px;width: 100%; min-width: 500px;height: auto;}
+.logo{
+    float: left;
+    position: relative;
+    height: 48px;width: auto;
+    margin-top: -5px;
+    padding-left: 5px;
+}
+.pick{
+    position: absolute;
+    margin-top: -85%;
+    margin-left: 18%;
+    text-align: center;
+    pointer-events: none;
+}
+p{margin:0}h1{margin:5px}
+.titre{
+    color:whitesmoke;
+    width: 100%;text-align: center;
+    font-family: "Sunny Spells";
+    font-size: xx-large;
+    color: var(--c-color2);
+    text-shadow: 2px 2px 2px var(--c-color1);
+}
+.window{
+    background-color: var(--c-main);
+    border-radius: 5px;
+    border: 1px solid var(--c-second);
+    box-shadow: 0px 1px 10px -3px var(--c-second);
+    padding: 0.5rem;color: whitesmoke;
+    font-size: large;
+}
+.hex:hover{
+    background-color: var(--c-bg);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 400ms;
+}
+button[type="button"]{
+    background-color: transparent;
+    padding: 0.5rem;border-radius: 5px;
+    border: none;
+    color: whitesmoke;
+}
+button[type="button"]:hover{
+    background-color: transparent;
+    padding: 0.5rem;border-radius: 5px;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 400ms;
+}
+input[type="search"]{
+    background-color: transparent;
+    padding: 0.5rem;border-radius: 5px;
+    border: none;width: 100%;
+    color: whitesmoke;
+}
+input[type="search"]:hover{
+    background-color: transparent;
+    padding: 0.5rem;border-radius: 5px;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 400ms;
+}
+input[type="button"]{
+    background-color: var(--c-second);
+    padding: 0.5rem;border-radius: 5px;
+    border: none;width: 5rem;
+    color: whitesmoke;
+}
+input[type="button"]:hover{
+    background-color: var(--c-bg);
+    padding: 0.5rem;border-radius: 5px;
+    border: none;width: 5rem;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 400ms;
+}
+input[type="color"] {
+    border-radius: 5px;
+    height: 5rem;width: 5rem;
+    cursor: pointer;transition: 400ms;
+    background-color: transparent;
+    appearance: none;
+	-webkit-appearance: none;border: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    border-radius: 5px;
+    border: 1px solid var(--c-second);
+    box-shadow: 0px 1px 10px -3px var(--c-second);
+    height: 5rem;width: 5rem;padding: 0;
+    position: relative;left: 0;
+}
+input[type="color"]::-webkit-color-swatch-wrapper:hover {
+    border-radius: 10px;
+    border: 1px solid var(--c-second);
+    box-shadow: 0px 1px 5px 1px var(--c-color2);
+    height: 5rem;width: 5rem;cursor: pointer;
+    transition: 400ms;padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border-radius: 5px;
+    border: 1px solid var(--c-second);
+    box-shadow: 0px 1px 10px -3px var(--c-second);
+    height: 5rem;width: 5rem;border: none;padding: 0;
+}
+a{
+    background-color: var(--c-bg);
+    padding: 0.5rem;border-radius: 5px;
+    border: none;width: 5rem;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 400ms;
+    text-decoration: none;
+    display: inline;
+}
+a:hover{
+    background-color: var(--c-second);
+    transition: 400ms;
+}
+.flex-container {
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%;
+}
+.flex-item:nth-child(1) {
+    -webkit-order: 0;-ms-flex-order: 0;
+    order: 0;-webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+.flex-item:nth-child(2) {
+    -webkit-order: 0;-ms-flex-order: 0;
+    order: 0;-webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+.center{margin-left: auto;margin-right: auto;}
+#result-rgb, #result-hex{text-align: center;margin-left: 0px;}
+.red,.green,.blue,.hex{
+    background-color: var(--c-second);
+    padding: 0.5rem;border-radius: 5px;
+    margin: 5px;
+}
+.red:hover,.green:hover,.blue:hover{
+    background-color: var(--c-bg);
+    padding: 0.5rem;border-radius: 5px;
+    margin: 5px;transition: 400ms;
+    cursor:pointer;
+}
+.clr{
+    background-Color:whitesmoke;
+    border-Radius:5px;
+    height:3rem;width:3.5rem;
+    float:Left;position:relative;
+    margin-Left:5px;margin-Top:5px;
+    cursor:not-allowed;
+}
+.clr:hover{
+    transition: 400ms;
+}
+#history{
+    padding: 0.5rem;height: 130px;
+    margin: 0 2rem 0 2rem;
+}
+.color-pick{min-width: 70%; padding-top: 1rem}
+.color-main{min-width:30%}
+.red-alert{
+    border-radius: 3px;
+    background-color: salmon;
+    color:black;
+    font-size: medium;
+    padding: 0.5rem; z-index: 999;
+    position: absolute;
+    font-weight: bolder;
+    bottom:5px;right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--c-color1);
+}

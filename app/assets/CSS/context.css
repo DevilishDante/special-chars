@@ -1,0 +1,54 @@
+.ctxmenu{
+  position:fixed;
+  min-width: 96px;
+  height:auto; padding: 8px;
+  margin:0; z-index:11;
+  overflow: visible;
+  background-color:var(--c-bg);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 12pt;
+  color: rgb(151, 151, 151);
+  border: 1px solid var(--c-second);
+}
+.ctxmenu:before{
+  content: " ";
+  position: absolute;
+  top: 15%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent var(--c-bg) transparent transparent;
+}
+.ctxline{
+  display:block; margin:0px;
+  padding:2px 2px 2px 8px;
+  overflow:visible;
+  text-shadow: 1px 1px black;
+  color: rgb(151, 151, 151);
+  border:2px solid transparent;
+}
+.ctxline:hover{
+  margin:0px;
+  padding:2px 2px 2px 8px;
+  background: var(--c-color2);
+  border: 2px solid var(--c-color2);
+  cursor: pointer;
+  text-shadow: 1px 1px black;
+  color: whitesmoke;
+  font-weight: 700; font-size: 12pt;
+  -webkit-transition-duration:0.3s;
+  -moz-transition-duration:0.3s;
+  transition-duration:0.3s;
+  text-decoration:none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
