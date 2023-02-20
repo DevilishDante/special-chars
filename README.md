@@ -2,10 +2,7 @@
 
 With Special chars, you can :
 
-* Copy/paste color picked in hex and rgb
-* Save some color, if you want (10 max)
-* and choose color with the picker or pick a color
-* Manage saved colors using history()
+* Pick and paste an spécial characters
 
 ## Preview
 
