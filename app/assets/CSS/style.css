@@ -17,18 +17,13 @@ body{
     max-width: 500px;
     width: 100%; 
     min-width: 500px;
-    height: auto;
+    height: 100vh;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
-.container {
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+.container {text-align: center;}
 
 .logo{
     float: left;
@@ -232,22 +227,34 @@ a:hover{
     justify-content: space-between;
     border-bottom: 3px solid var(--c-color1);
 }
-
+.green-alert{
+    border-radius: 3px;
+    background-color: rgb(84, 157, 84);
+    color:black;
+    font-size: medium;
+    padding: 0.5rem; z-index: 999;
+    position: fixed;
+    font-weight: bolder;
+    bottom:5px;right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid rgb(39, 79, 39);
+}
 #search-input {font-size: medium;}
 
 #char-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content:space-between;
 }
 
 .char-item {
-    margin: 10px;
-    padding: 15px;
-    font-size: 24px;
+    margin: 5px;
+    padding: 10px;
+    font-size: 30px;
     cursor: pointer;
-    border: 1px solid #ccc;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
@@ -256,4 +263,8 @@ a:hover{
     background-color: var(--c-color2);
     color: var(--c-bg);
     border-color: var(--c-second);
+}
+.char-copied{
+    font-size: 2rem !important;
+    font-weight: bolder !important;
 }

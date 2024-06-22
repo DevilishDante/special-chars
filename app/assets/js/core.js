@@ -256,7 +256,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { char: 'ˇ︿ˇ', tags: ['smiley'] },
         { char: 'ټ', tags: ['smiley'] },
     ];
-    
+
+    const popularTags = ['Animaux', 'Émotions', 'Visages', 'Symboles', 'Japonais', 'Humour', 'Coeurs', 'Musique', 'ASCII', 'Texte', 'decorative','smiley'];
 
     const charListContainer = document.getElementById("char-list");
     const searchInput = document.getElementById("search-input");
@@ -276,24 +277,35 @@ document.addEventListener("DOMContentLoaded", () => {
     // Affiche tous les caractères au chargement initial
     displayChars(specialChars);
 
-    // Filtre les caractères en fonction des tags
-    searchInput.addEventListener("input", (e) => {
-        const query = e.target.value.toLowerCase();
-        const filteredChars = specialChars.filter(item => 
-            item.tags.some(tag => tag.includes(query))
+    // Fonction pour filtrer les caractères en fonction des tags
+    function filterChars(query) {
+        const filteredChars = specialChars.filter(item =>
+            item.tags.some(tag => tag.toLowerCase().includes(query))
         );
         displayChars(filteredChars);
+    }
+
+    // Écouteur d'événement pour le champ de recherche
+    searchInput.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        filterChars(query);
     });
-});
 
-// Fonction pour copier le texte dans le presse-papiers
-function copyToClipboard(text) {
-    const textarea = document.createElement("textarea");
-    textarea.value = text;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
 
-    alert(`'${text}' copié dans le presse-papiers!`);
-}
+    // Fonction pour copier le texte dans le presse-papiers
+    function copyToClipboard(text) {
+        const textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        const noadd = document.getElementById('notifs');
+        const bg = '#ccff90'
+        const check = '#4caf50'
+        const svg = '<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="'+ bg +'" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"/><path fill="'+ check +'" d="M34.602,14.602L21,28.199l-5.602-5.598l-2.797,2.797L21,33.801l16.398-16.402L34.602,14.602z"/></svg>';
+        noadd.innerHTML = '<div class="green-alert"><span class="char-copied">'+ text +'</span>  Copié dans le presse-papiers ! '+ svg +' </div>';
+        setTimeout(() => noadd.innerHTML = '', 6000);
+    }
+})
