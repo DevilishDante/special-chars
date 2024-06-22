@@ -1,6 +1,10 @@
 @font-face {
-    font-family: "Sunny Spells";
-    src: url(/app/assets/font/Sunny\ Spells.ttf);
+    font-family: "Sansation Titre";
+    src: url(/app/assets/font/Sansation_Bold.ttf);
+}
+@font-face {
+    font-family: "Sansation";
+    src: url(/app/assets/font/Sansation_Regular.ttf);
 }
 :root{
     --c-bg: #11151C;
@@ -43,16 +47,19 @@ p{margin:0}h1{margin:5px}
 .titre{
     color:whitesmoke;
     width: 100%;text-align: center;
-    font-family: "Sunny Spells";
+    font-family: "Sansation Titre";
     font-size: xx-large;
     color: var(--c-color2);
     text-shadow: 2px 2px 2px var(--c-color1);
+    text-transform: uppercase;
 }
 .window{
-    background-color: var(--c-main);
+    /* background-color: var(--c-main); */
     border-radius: 5px;
-    border: 1px solid var(--c-second);
-    box-shadow: 0px 1px 10px -3px var(--c-second);
+    /* border: 1px solid var(--c-second); */
+    /* box-shadow: 0px 1px 10px -3px var(--c-second); */
+    border: 1px solid rgb(250 128 114 / 26%);
+    box-shadow: 0px 1px 10px -3px rgb(250 128 114 / 26%);
     padding: 0.5rem;color: whitesmoke;
     font-size: large;
 }
