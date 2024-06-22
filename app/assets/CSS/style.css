@@ -203,9 +203,7 @@ a:hover{
     margin-Left:5px;margin-Top:5px;
     cursor:not-allowed;
 }
-.clr:hover{
-    transition: 400ms;
-}
+.clr:hover{transition: 400ms;}
 #history{
     padding: 0.5rem;height: 130px;
     margin: 0 2rem 0 2rem;
@@ -243,28 +241,46 @@ a:hover{
     border-bottom: 3px solid rgb(39, 79, 39);
 }
 #search-input {font-size: medium;}
-
 #char-list {
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
 }
-
 .char-item {
     margin: 5px;
     padding: 10px;
     font-size: 30px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
-
 .char-item:hover {
     background-color: var(--c-color2);
     color: var(--c-bg);
     border-color: var(--c-second);
+    transform: scale(1.2);
 }
 .char-copied{
     font-size: 2rem !important;
     font-weight: bolder !important;
+}
+.tab {
+    cursor: pointer;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+}
+.tab.active, .tab:hover {
+    background-color: var(--c-color2);
+    color: var(--c-bg);
+    border-color: var(--c-second);
+    font-weight: bolder;
+}
+.tab:hover{transform: scale(1.1);}
+.tab-flex{display: flex;}
+hr{
+    color: var(--c-bg);
+    border: 2px solid var(--c-bg);
+    border-radius: 5px;
 }
