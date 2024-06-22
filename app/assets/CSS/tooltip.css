@@ -37,6 +37,7 @@ tooltip .t-bottom::before {
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent var(--c-tooltip) transparent;
+    z-index: 10;
 }
 /* top */
 tooltip .t-top {
@@ -55,6 +56,7 @@ tooltip .t-top::before {
     border-width: 5px;
     border-style: solid;
     border-color: var(--c-tooltip) transparent transparent transparent;
+    z-index: 10;
 }
 /* left */
 tooltip .t-left {top: -5px;right: 105%;}
@@ -67,7 +69,8 @@ tooltip .t-left::before {
     margin-top: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent transparent var(--c-tooltip)
+    border-color: transparent transparent transparent var(--c-tooltip);
+    z-index: 10;
 }
 /* right */
 tooltip .t-right {top: -5px;left: 105%;}
@@ -81,6 +84,7 @@ tooltip .t-right::after {
     border-width: 5px;
     border-style: solid;
     border-color: transparent var(--c-tooltip) transparent transparent;
+    z-index: 10;
 }
 /* fadeout */
 tooltip .t-content,tooltip .t-bottom,
