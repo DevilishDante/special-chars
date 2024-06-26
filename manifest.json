@@ -1,11 +1,20 @@
 {
   "manifest_version": 3,
   "name": "Special Chars",
-  "description": "Select the chars that you wish !",
+  "description": "Select the chars that you wish!",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "sidePanel"
+  ],
   "version": "1.0",
   "action": {
     "default_title": "Open the Chars picker",
-    "default_popup": "/app/index.html"
+    "default_popup": "/app/popup.html"
+  },
+  "side_panel": {
+    "default_path": "/app/sidepanel.html"
   },
   "icons": {
     "16": "/app/assets/icons/icon-16.png",
@@ -14,7 +23,7 @@
     "128": "/app/assets/icons/icon-128.png",
     "256": "/app/assets/icons/icon-256.png"
   },
-  "background": [{
-    "service_worker": "/app/assets/js/core.js"
-  }]
+  "background": {
+    "service_worker": "/app/assets/js/actions/service.js"
+  }
 }
